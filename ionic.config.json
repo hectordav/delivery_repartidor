@@ -1,0 +1,8 @@
+{
+  "name": "delirepa",
+  "app_id": "244d2647",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

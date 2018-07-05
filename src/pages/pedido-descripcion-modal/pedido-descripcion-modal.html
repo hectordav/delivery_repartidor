@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="color_nav_bar">
+    <ion-title>Nuevo Pedido</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+	<ion-item no-lines text-wrap>
+		Establecimiento: {{result_buscar_pedido.nombre_establecimiento}}
+		<p>Direccion: {{result_buscar_pedido.direccion_establecimiento}}</p>
+	</ion-item>
+		<ion-item no-lines text-wrap>
+			Entrega: {{result_buscar_pedido.direccion_entrega}}
+			<p>{{result_buscar_pedido.detalles_direccion_entrega}}</p>
+		</ion-item>
+		<ion-item no-lines text-wrap>
+			Hora de entrega: {{result_buscar_pedido.hora_entrega}}
+		</ion-item>
+</ion-content>
+<ion-footer>
+			<ion-grid>
+    <ion-row>
+      <ion-col col-5 text-center>
+        <button ion-button  full color="danger"  (click)="ignorar_pedido()">Ignorar</button>
+      </ion-col>
+      <ion-col col-2 text-center class="remaining">
+        <span>{{ remainingTime }}</span>
+      </ion-col>
+      <ion-col col-5 text-center>
+        <button  ion-button full  color="secondary"  (click)="aceptar_pedido()">Aceptar</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

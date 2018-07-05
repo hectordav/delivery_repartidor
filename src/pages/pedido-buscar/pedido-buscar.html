@@ -1,0 +1,36 @@
+<!-- <div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="../../assets/img/lupa.png">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div> -->
+<ion-header>
+
+  <ion-navbar color="color_nav_bar">
+    <ion-title>Buscar Pedidos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div id="panel" style="display: none"></div>
+<div class="message">
+  Buscando pedidos..
+ </div>
+ <!-- <div class="indicador"></div> -->
+ <div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img class="imagen" src="assets/img/lupa.png">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+</ion-content>
+<ion-footer padding>
+	<button ion-button icon-start full color="boton_aceptar" (click)="volver_home()">
+		<ion-icon name="arrow-round-back"></ion-icon>
+		Volver
+	</button>
+</ion-footer>

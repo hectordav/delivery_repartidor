@@ -1,0 +1,32 @@
+page-pedido-descripcion-modal {
+	  .remaining {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      width: 24px;
+      padding: 3px;
+      border-radius: 50%;
+      border: 1px solid color($colors, secondary);
+      font-size: 1em;
+    }
+  }
+  .bottom-buttons{
+  	position:absolute;bottom:0
+  }
+  .remaining{
+  	display:-webkit-box;
+  	display:-webkit-flex;
+  	display:-ms-flexbox;
+  	display:flex;
+  	-webkit-box-pack:center;
+  	-webkit-justify-content:center;
+  	-ms-flex-pack:center;
+  	justify-content:center;
+  	-webkit-box-align:center;
+  	-webkit-align-items:center;
+  	-ms-flex-align:center;
+  	align-items:center
+  }
+}

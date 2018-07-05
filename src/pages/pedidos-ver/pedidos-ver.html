@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar color="color_nav_bar">
+    <ion-title>Pedido</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+	<div class="fondo color_texto">
+	<strong>Establecimiento</strong>
+</div>
+<div align="center">
+	<strong>
+	<h4>
+		{{result_pedido.nombre_establecimiento}}
+	</h4>
+</strong>
+</div>
+<div class="fondo color_texto">
+	<strong>Direccion:</strong>
+</div>
+<div padding>
+	{{result_pedido.direccion_establecimiento}}
+	<p>{{result_pedido.detalles_direccion_establecimiento}}</p>
+</div>
+	<div class="fondo color_texto">
+	<strong>Detalles de Pedido</strong>
+</div>
+<div padding>
+	<ion-grid>
+		<div *ngFor="let item of result_det_pedido">
+			<ion-item no-lines>
+				<ion-row>
+					<ion-col col-1>{{item.cantidad}}</ion-col>
+					<ion-col col-8>
+						<strong>{{item.descripcion}}</strong>
+					</ion-col>
+					<ion-col col-2>MNX {{item.total | number : '1.2-2'}}
+					</ion-col>
+				</ion-row>
+			</ion-item>
+	 	</div>
+	</ion-grid>
+</div>
+<div class="fondo color_texto">
+	<strong>Cliente:</strong>
+</div>
+<div align="center">
+		<h4>{{result_pedido.nombre_usuario}}</h4>
+</div>
+<div class="fondo color_texto">
+	<strong>Direccion de Entrega:</strong>
+</div>
+<div padding>
+	{{result_pedido.direccion_entrega}}
+	<p>{{result_pedido.detalles_direccion_entrega}}</p>
+</div>
+<div class="fondo color_texto">
+	<strong>Hora de entrega:</strong>
+</div>
+<div padding align="center">
+	<h4>{{result_pedido.hora_entrega}}</h4>
+</div>
+<ion-fab right bottom>
+    <button ion-fab color="boton_pedido_descripcion"><ion-icon name="md-add"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab color="primary" (click)="mensaje_cliente()"><ion-icon name="chatboxes"></ion-icon></button>
+      <button ion-fab color="primary" (click)="mensaje_establecimiento()"><ion-icon name="md-chatboxes"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
+<ion-footer>
+
+</ion-footer>
